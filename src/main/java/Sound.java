@@ -18,7 +18,7 @@ public class Sound
     for(int i = 0; i < samples.length;i++){
       if(samples[i] > limit){
         samples[i] = limit;
-        count++
+        count++;
       } else if(samples[i] < -limit){
         samples[i] = -limit;
         count++;
@@ -37,12 +37,12 @@ public class Sound
   public void trimSilenceFromBeginning(){
     int i = 0;
     while(samples[i] == 0){
-      i++
+      i++;
     }
     int[] tempList = new int[samples.length - i];
     for(int j = 0; j < tempList.length; j++){
       tempList[j] = samples[i];
-      i++
+      i++;
     }
     samples = tempList;
   }
